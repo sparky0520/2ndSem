@@ -10,15 +10,17 @@ const Home = () => {
   const [books, setBooks] = useState([])
   const [loading, setLoading] = useState(false)
   useEffect(() => {
+    console.log("Fetching books...") // Check if useEffect is being called
     setLoading(true)
     axios
-      .get('http://localhost:5555/books/')
+      .get("http://127.0.0.1:5555/books")
       .then((res) => {
-        setBooks(res.data)
+        console.log("Received data:", res.data); // Log received data
+        setBooks(res.data.data)
         setLoading(false)
       })
       .catch((err) => {
-        console.log(err)
+        console.log("Error:", err); // Log any errors
         setLoading(false)
       })
   }, [])
@@ -44,7 +46,7 @@ const Home = () => {
             </tr>
           </thead>
           <tbody>
-            {books.map((book, index) => {
+            {books.map((book, index) => (
               <tr key={book._id} className='h-8'>
                 <td className='border border-slate-700 rounded-md text-center'>{index + 1}</td>
                 <td className='border border-slate-700 rounded-md text-center'>{book.title}</td>
@@ -64,7 +66,7 @@ const Home = () => {
                   </div>
                 </td>
               </tr>
-            })}
+            ))}
           </tbody>
         </table>
       )}

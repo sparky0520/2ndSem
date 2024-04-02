@@ -8,8 +8,6 @@ const app = express();
 
 app.use(express.json())
 
-app.use("/books",booksRoute)
-
 // Allow users of all configurations
 app.use(cors())
 
@@ -19,6 +17,8 @@ app.use(cors())
 //     methods: ['GET','POST','PUT','DELETE'],
 //     allowedHeaders: ['Content-Type']
 // }));
+
+app.use("/books",booksRoute)
 
 app.get("/", (req, res) => {
     return res.status(200).send("Welcome to Book Store App !")
