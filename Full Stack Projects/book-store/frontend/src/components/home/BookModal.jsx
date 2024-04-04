@@ -17,12 +17,13 @@ const BookModal = ({ book, onClose }) => {
                 <h4 className='my-2 text-gray-500'>{book._id}</h4>
                 <div className='flex justify-start items-center gap-x-2'>
                     <PiBookOpenTextLight className='text-red-300 text-2xl' />
-                    <h2 className='my-1'>{book.title}</h2>
+                    <h2 className='my-1 text-gray-800'>{book.title}</h2>
                 </div>
                 <div className='flex justify-start items-center gap-x-2'>
                     <BiUserCircle className='text-red-300 text-2xl' />
-                    <h2 className='my-1'>{book.author}</h2>
+                    <h2 className='my-1 text-gray-800'>{book.author}</h2>
                 </div>
+                <div className="my-1 text-gray-800">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas unde amet odio pariatur? Voluptatem sunt, sint consequatur nisi ipsam blanditiis aut, odio, repudiandae sit nemo adipisci voluptate quos explicabo dolore!</div>
             </div>
         </div>
     )
