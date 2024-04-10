@@ -1,0 +1,18 @@
+.window{
+    height: 40%;
+    
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    color: #FFF;
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+    margin-right: 3.69rem;
+
+    position:relative;
+    top: -3.63rem;
+}

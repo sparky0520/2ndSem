@@ -1,0 +1,9 @@
+.container {
+    width: 26.875rem;
+    height: 58.25rem;
+    border-radius: 4.0625rem;
+    background: #000;
+    margin-top: 1rem;
+
+    border: 1px solid #BCB2B4;
+}
