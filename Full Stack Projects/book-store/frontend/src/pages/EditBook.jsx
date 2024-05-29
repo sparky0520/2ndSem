@@ -28,15 +28,15 @@ const EditBook = () => {
         console.log(err)
       })
   },[])
-  const handleEditBook = () => {
-    const data ={
-      title,
-      author,
-      publishYear,
-    }
-    setLoading(true)
-    axios
-      .put(`http://localhost:5555/books/${id}`,data)
+    const handleEditBook = () => {
+      const data ={
+        title,
+        author,
+        publishYear,
+      }
+      setLoading(true)
+      axios
+        .put(`http://localhost:5555/books/${id}`,data)
       .then(()=> {
         setLoading(false)
         enqueueSnackbar("Details Changed Successfully", { variant: 'success' })
